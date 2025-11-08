@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Fuyad Hassan - Professional Portfolio (DB Enabled)</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for professional symbols -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define a custom color palette and font using Tailwind configuration */
+        :root {
+            /* Dark background */
+            --color-bg-primary: #111827;
+            /* Lighter background for cards/sections */
+            --color-bg-secondary: #1F2937;
+            /* Accent color (Teal) */
+            --color-accent: #2DD4BF;
+            /* Text color */
+            --color-text-light: #F9FAFB;
+            /* Muted text color */
+            --color-text-muted: #D1D5DB;
+        }
+
+        /* Apply custom colors using Tailwind classes */
+        .bg-primary { background-color: var(--color-bg-primary); }
+        .bg-secondary { background-color: var(--color-bg-secondary); }
+        .text-light { color: var(--color-text-light); }
+        .text-muted { color: var(--color-text-muted); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+
+        /* Ensure smooth scrolling when clicking navigation links */
+        html { scroll-behavior: smooth; }
+
+        /* Custom utility for subtle card hover effect */
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(45, 212, 191, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-primary text-light font-sans min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#" class="text-2xl font-bold text-accent">Fuyad Hassan</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-lg text-muted hover:text-accent transition duration-300">About</a>
+                <a href="#skills" class="text-lg text-muted hover:text-accent transition duration-300">Skills</a>
+                <a href="#projects" class="text-lg text-muted hover:text-accent transition duration-300">Projects</a>
+                <a href="#contact" class="text-lg text-muted hover:text-accent transition duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-light focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary pb-4">
+            <nav class="flex flex-col space-y-2 px-4">
+                <a href="#about" class="py-2 text-muted hover:text-accent transition duration-300 border-b border-gray-700">About</a>
+                <a href="#skills" class="py-2 text-muted hover:text-accent transition duration-300 border-b border-gray-700">Skills</a>
+                <a href="#projects" class="py-2 text-muted hover:text-accent transition duration-300 border-b border-gray-700">Projects</a>
+                <a href="#contact" class="py-2 text-muted hover:text-accent transition duration-300 border-b border-gray-700">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="py-24 md:py-36 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Hello, I'm <span class="text-accent">Fuyad Hassan</span>.
+            </h1>
+            <p class="text-2xl text-muted max-w-3xl mx-auto mb-8">
+                I'm a Full-Stack Developer passionate about building accessible, performant, and beautiful web applications.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="px-6 py-3 bg-accent text-primary font-semibold rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300 flex items-center">
+                    View Projects <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+                <a href="#contact" class="px-6 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent/10 transition duration-300 flex items-center">
+                    Get in Touch <i data-lucide="mail" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center text-accent mb-12">
+                <i data-lucide="user" class="inline-block w-8 h-8 mr-3"></i> About Me
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <p class="text-lg text-muted mb-6 leading-relaxed">
+                       I am studying in Bsc in Software Engineering at Metropolitan University Bnagladesh.I am experienced in HTML CSS JAVA PYTHON JAVASCRIPT C++ programming language
+                    </p>
+                    <p class="text-lg text-muted leading-relaxed">
+                        Beyond coding, I contribute to open-source projects and enjoy exploring the latest trends in cloud infrastructure and Web Development. When I'm not at the keyboard, you can find me hiking or experimenting with new coffee brewing techniques.
+                    </p>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Placeholder Profile Image -->
+                    <div class="w-48 h-48 mx-auto bg-gray-700 rounded-full flex items-center justify-center border-4 border-accent shadow-2xl">
+                        <i data-lucide="code" class="w-20 h-20 text-accent"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section - Expanded Content -->
+        <section id="skills" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center text-accent mb-12">
+                <i data-lucide="zap" class="inline-block w-8 h-8 mr-3"></i> Core Skills
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Skill Card: Front-End -->
+                <div class="bg-secondary p-6 rounded-xl shadow-xl card-hover-effect border-t-4 border-accent/50">
+                    <i data-lucide="react" class="w-8 h-8 text-accent mb-3"></i>
+                    <h3 class="text-xl font-semibold text-light">Front-End</h3>
+                    <p class="text-muted mt-2 text-sm">React, Vue, HTML5, Tailwind, Svelte</p>
+                </div>
+                <!-- Skill Card: Back-End -->
+                <div class="bg-secondary p-6 rounded-xl shadow-xl card-hover-effect border-t-4 border-accent/50">
+                    <i data-lucide="database" class="w-8 h-8 text-accent mb-3"></i>
+                    <h3 class="text-xl font-semibold text-light">Back-End</h3>
+                    <p class="text-muted mt-2 text-sm">Node.js, Express, Python (Django)</p>
+                </div>
+                <!-- Skill Card: Databases -->
+                <div class="bg-secondary p-6 rounded-xl shadow-xl card-hover-effect border-t-4 border-accent/50">
+                    <i data-lucide="server" class="w-8 h-8 text-accent mb-3"></i>
+                    <h3 class="text-xl font-semibold text-light">Databases</h3>
+                    <p class="text-muted mt-2 text-sm">PostgreSQL, MongoDB, Redis, Firebase</p>
+                </div>
+                <!-- Skill Card: Tools/DevOps -->
+                <div class="bg-secondary p-6 rounded-xl shadow-xl card-hover-effect border-t-4 border-accent/50">
+                    <i data-lucide="git-branch" class="w-8 h-8 text-accent mb-3"></i>
+                    <h3 class="text-xl font-semibold text-light">OOP</h3>
+                    <p class="text-muted mt-2 text-sm">Java, C++</p>
+                </div>
+             
+            </div>
+        </section>
+
+        <!-- Projects Section - Expanded Content -->
+        <section id="projects" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center text-accent mb-12">
+                <i data-lucide="folder-git-2" class="inline-block w-8 h-8 mr-3"></i> Featured Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: Dashboard -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-2xl card-hover-effect">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-light mb-3 flex items-center">
+                            <i data-lucide="layout-dashboard" class="w-5 h-5 mr-2 text-accent"></i> Project Tracker Dashboard
+                        </h3>
+                        <p class="text-muted mb-4 text-sm">
+                            A responsive dashboard built with React and a Node.js backend for real-time task management, featuring custom charts and user authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">React</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-accent hover:text-light transition duration-300 font-semibold flex items-center mt-3">
+                            View Demo <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div> 
+
+                <!-- Project Card 2: E-commerce API -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-2xl card-hover-effect">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-light mb-3 flex items-center">
+                            <i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-accent"></i> E-commerce API Service
+                        </h3>
+                        <p class="text-muted mb-4 text-sm">
+                            Developed a highly scalable, microservices-based API using Python/Django to handle product catalog, inventory, and order processing with optimized database queries.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">Python</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">Django</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="text-accent hover:text-light transition duration-300 font-semibold flex items-center mt-3">
+                            View Code <i data-lucide="github" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NEW Project Card 3: Portfolio Generator -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-2xl card-hover-effect">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-light mb-3 flex items-center">
+                            <i data-lucide="rocket" class="w-5 h-5 mr-2 text-accent"></i> Static Site Generator (CLI)
+                        </h3>
+                        <p class="text-muted mb-4 text-sm">
+                            A command-line tool written in pure Node.js that converts Markdown files into fast, accessible static HTML portfolios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">CLI</span>
+                            <span class="text-xs px-2 py-1 bg-gray-700 text-accent rounded-full">Markdown</span>
+                        </div>
+                        <a href="#" class="text-accent hover:text-light transition duration-300 font-semibold flex items-center mt-3">
+                            Read More <i data-lucide="book-open-text" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section - Enhanced Content -->
+        <section id="contact" class="py-16 border-t border-gray-800">
+            <h2 class="text-4xl font-bold text-center text-accent mb-12">
+                <i data-lucide="message-square" class="inline-block w-8 h-8 mr-3"></i> Get In Touch
+            </h2>
+            <div class="max-w-lg mx-auto bg-secondary p-8 rounded-xl shadow-2xl border-t-4 border-accent">
+                <p class="text-lg text-muted text-center mb-6">
+                    Have a project idea, a job opportunity, or just want to connect? Send me a message, or find me on social media!
+                </p>
+                <!-- Status Message Area -->
+                <div id="contact-status" class="hidden"></div>
+
+                <!-- Contact Form -->
+                <!--
+                    This form posts to `process-contact.php` as a server-side fallback.
+                    Client-side JS will only intercept submission when Firestore (db) is available.
+                -->
+                <form id="contact-form" action="process-contact.php" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-muted mb-1">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-primary border border-gray-600 focus:border-accent focus:ring-accent outline-none text-light">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-muted mb-1">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-primary border border-gray-600 focus:border-accent focus:ring-accent outline-none text-light">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-muted mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg bg-primary border border-gray-600 focus:border-accent focus:ring-accent outline-none text-light"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-accent text-primary font-semibold rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300 flex items-center justify-center">
+                        Send Message <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                    </button>
+                </form>
+
+                <!-- Social Links in Contact Section for Mobile View -->
+                <div class="mt-8 pt-4 border-t border-gray-700 text-center">
+                    <h4 class="text-lg font-semibold text-light mb-3">Connect Here</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/fuyad-hassan-677719380/?skipRedirect=true" class="text-muted hover:text-accent transition duration-300" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-7 h-7"></i>
+                        </a>
+                        <a href="https://github.com/Fuyad22" class="text-muted hover:text-accent transition duration-300" aria-label="GitHub">
+                            <i data-lucide="github" class="w-7 h-7"></i>
+                        </a>
+                        <a href="fuyadhassanswe@gmail.com" class="text-muted hover:text-accent transition duration-300" aria-label="Email">
+                            <i data-lucide="mail" class="w-7 h-7"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary mt-16 py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-500">
+                &copy; <span id="year"></span> Fuyad Hassan. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Set log level for debugging, as required
+        setLogLevel('Debug');
+
+        // --- Firebase Initialization & Authentication Setup ---
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-portfolio-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db = null;
+        let auth = null;
+        let userId = null;
+
+        if (firebaseConfig) {
+            const app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+            console.log("Firebase Initialized.");
+
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    userId = user.uid;
+                    console.log("Authenticated with UID:", userId);
+                    // Attach form submission listener once authenticated
+                    setupContactFormListener();
+                } else {
+                    console.log("No user signed in. Attempting sign-in...");
+                    try {
+                        if (initialAuthToken) {
+                            await signInWithCustomToken(auth, initialAuthToken);
+                        } else {
+                            // If no token, sign in anonymously
+                            await signInAnonymously(auth);
+                        }
+                    } catch (error) {
+                        console.error("Firebase Auth Error:", error);
+                        // Fallback user ID if auth fails completely
+                        userId = crypto.randomUUID();
+                        setupContactFormListener();
+                    }
+                }
+            });
+        } else {
+            console.error("Firebase config not available. Database features are disabled.");
+            userId = crypto.randomUUID(); // Use a temp ID if Firebase isn't configured at all
+            setupContactFormListener();
+        }
+
+        // --- Contact Form Submission Logic ---
+        function setupContactFormListener() {
+            const contactForm = document.getElementById('contact-form');
+            const statusDiv = document.getElementById('contact-status');
+
+            if (!contactForm) return;
+
+            // Important: only attach the JS submit handler when Firestore (db) is available.
+            // If `db` is not initialized, we want the form to submit normally to the server-side
+            // processor at `process-contact.php` (progressive enhancement / graceful fallback).
+            if (!db) {
+                // No client-side database available; allow regular form POST to server.
+                return;
+            }
+
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                if (!userId) {
+                    displayStatus(statusDiv, "Error: Authentication failed. Cannot send message.", 'bg-red-600');
+                    return;
+                }
+
+                displayStatus(statusDiv, "Sending message...", 'bg-gray-700');
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                try {
+                    // Saves data to private collection: /artifacts/{appId}/users/{userId}/contact_messages
+                    const messagesCollectionRef = collection(db, 'artifacts', appId, 'users', userId, 'contact_messages');
+
+                    await addDoc(messagesCollectionRef, {
+                        name: name,
+                        email: email,
+                        message: message,
+                        timestamp: new Date()
+                    });
+
+                    displayStatus(statusDiv, "Success! Your message has been sent.", 'bg-green-600');
+                    contactForm.reset(); // Clear the form on success
+
+                } catch (error) {
+                    console.error("Error writing document to Firestore:", error);
+                    displayStatus(statusDiv, "Error sending message. Check the console for database details.", 'bg-red-600');
+                }
+            });
+        }
+
+        function displayStatus(element, message, bgColor) {
+            element.textContent = message;
+            element.className = `p-3 mb-4 text-center text-light font-medium rounded-lg ${bgColor}`;
+            element.classList.remove('hidden');
+            // Hide the status message after 5 seconds
+            setTimeout(() => {
+                element.classList.add('hidden');
+            }, 5000);
+        }
+
+        // --- General DOM Setup (Run immediately) ---
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu after clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
